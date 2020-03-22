@@ -1,0 +1,18 @@
+--Stair Climbing Simulator Bot
+--by Sparksammy
+local RunService = game:GetService("RunService")
+local disp = game.Players.LocalPlayer.PlayerGui.Display
+
+RunService.RenderStepped:Connect(function(step)
+	local steps = disp.Steps.Steps.Text --get text value
+	local stepsSplit = steps:split("/") --split at /
+	local currentSteps = tonumber(stepsSplit[1]) --get current steps from split, convert to number
+	local maxSteps = tonumber(stepsSplit[2]) --get remaining steps from split,  convert to number.
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 666 --gotta go fasat
+    keypress(0x57) --hold w, also should prevent afk timeout
+    wait(.1) --wait so we can wait for updates
+    if currentSteps == maxSteps then --check if current is equal to max
+        game.ReplicatedStorage.TurtleEvent:FireServer(); --fire rebirth
+    end
+	print(maxSteps - currentSteps .. " to go!") --some friendly debug info
+end)

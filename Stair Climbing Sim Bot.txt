@@ -1,0 +1,7 @@
+--by Sparksammy
+local RunService = game:GetService("RunService")
+
+RunService.RenderStepped:Connect(function(step)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 666
+game.Players.LocalPlayer.Character.Humanoid:Move(Vector3.new(0,0,1), false)
+end)
