@@ -1,5 +1,5 @@
 --Sparksammy's Funnny Character Script
-game.Players.LocalPlayer.Character.Head:FindFirstChildOfClass("Mesh"):Destroy()
+game.Players.LocalPlayer.Character.Head:FindFirstChildOfClass("SpecialMesh"):Destroy()
 game.Players.LocalPlayer.Character.Head:FindFirstChildOfClass("Decal"):Destroy()
 game.Players.LocalPlayer.Character["Left Arm"]:Destroy()
 game.Players.LocalPlayer.Character["Right Arm"]:Destroy()
